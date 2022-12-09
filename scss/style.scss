@@ -1,0 +1,33 @@
+@import "./var";
+@import "./common";
+
+@font-face {
+    font-family: "TT Norms Pro";
+    src: url('../fonts/TTNormsPro-Medium.eot');
+    src: local('../fonts/TT Norms Pro Medium'), local('TTNormsPro-Medium'),
+        url('../fonts/TTNormsPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTNormsPro-Medium.woff2') format('woff2'),
+        url('../fonts/TTNormsPro-Medium.woff') format('woff'),
+        url('../fonts/TTNormsPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+	font-family: "TT Norms Pro", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 14px;
+	background-color: #f2f2f2;
+}
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+// header
+@import "./components/header/menu";
+
+// main
+@import "./components/main/film-view"
