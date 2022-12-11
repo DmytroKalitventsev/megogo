@@ -1,106 +1,142 @@
 .header-content {
-	background-color: #1F1F1F;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 20px;
+	@include flex(space-between, center);
 
-	&__logo {
-		height: 50px;
-		display: flex;
-		align-items: center;
-		&-img {
+	background-color: #1F1F1F;
+	padding: 0 20px;
+}
+.logo {
+	@include flex();
+
+	height: 50px;
+		&__img {
 			width: 100px;
 		}
 	}
-}
 .menu {
-	display: flex;
-	align-items: center;
-	&__item {
-		height: 50px;
-		display: flex;
-		align-items: center;
-		cursor: pointer;
+	@include flex();
 
-		&_active {
-			&:hover {
-				background-color: #fff;
-				color: $menuHoverTextColor;
-			}
-		}
-		&:hover {
-			a {
-				color: $menuHoverTextColor;
-			}
-		}
-		&-text {
-			margin-right: 13px;
+	&__item {
+		&-link {
+			padding: 18px 7px;
+			letter-spacing: .8px;
 			color: $menuTextColor;
 			text-transform: uppercase;
+			line-height: 14px;
+			transition: color $menuHoverTransition;
+			&:hover {
+				color: $menuHoverTextColor;
+			}
+		}
+		&:nth-child(7) {
+			margin-right: 5px;
 		}
 	}
-	&__list {
-		height: 50px;
-		width: 50px;
-		display: flex;
-		justify-content: center;
-		font-weight: 900;
-		color: gray;
-		font-size: 29px;
-		letter-spacing: 2px;
-		&:hover {
-			background-color: #fff;
+	&__dropdown {
+		position: relative;
+		transition: color $menuHoverTransition;
+		&:hover &-item {
+			background-color: $menuHoverBgColor;
 			color: $menuHoverTextColor;
+		}
+		&:hover &-list {
+			display: block;
+		}
+		&-item {
+			transition: color $menuHoverTransition;
+			transition: background-color $menuHoverTransition;
+			&:hover {
+				background-color: $menuHoverBgColor;
+				color: $menuHoverTextColor;
+			}
+			&_bg-white {
+				padding: 18px 7px;
+				letter-spacing: .8px;
+				color: $menuTextColor;
+				text-transform: uppercase;
+				line-height: 14px;
+				transition: color $menuHoverTransition;
+				transition: background-color $menuHoverTransition;
+				&:hover {
+					background-color: $menuHoverBgColor;
+					color: $menuHoverTextColor;
+				}
+			}
+			&_gray {
+				padding: 4px 17px 17px 17px;
+				font-weight: bold;
+				color: gray;
+				font-size: 24px;
+				letter-spacing: 2px;
+				line-height: 29px;
+				cursor: pointer;
+			}
+		}
+		&-list {
+			position: absolute;
+			top: 50px;
+			left: 0;
+			background-color: $menuHoverBgColor;
+			padding: 12px 19px;
+			font-size: 14px;
+			width: 240px;
+			box-shadow: 10px 10px 10px -10px rgb(0 0 0 / 15%);
+			display: none;
+		}
+		&-link {
+			padding: 7px 20px;
+			color: #333;
+			transition: color $menuHoverTransition;
+			&:hover {
+				color: #f60;
+			}
 		}
 	}
 }
-.add-menu {
-	display: flex;
-	align-items: center;
-	&__item {
+.additional-menu {
+	@include flex();
+
+	&__button {
 		color: $menuTextColor;
 		margin-left: 20px;
 		cursor: pointer;
-
-		&_tariffs {
-			width: 85px;
-			height: 30px;
-			border: 1px solid white;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border-radius: 3px;
-			&:hover {
-				border-color: $menuHoverTextColor;
-				color: $menuHoverTextColor;
-			}
-		}
-		&_search {
-			height: 50px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		&_language {
-			height: 50px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: gray;
-			font-weight: bold;
-			&:hover {
-				color: #fff;
-			}
-		}
-		&_authorization {
-			text-transform: uppercase;
-			&:hover {
-				color: $menuHoverTextColor;
-			}
-		}
 	}
-	&__search-img {
+}
+.tariffs-button {
+	@include flex();
+
+	width: 85px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 3px;
+	transition: color $menuHoverTransition;
+	&:hover {
+		border-color: $menuHoverTextColor;
+		color: $menuHoverTextColor;
+	}
+}
+.search-button {
+	@include flex();
+
+	height: 50px;
+	&__img {
 		width: 15px;
+	}
+}
+.language-button {
+	@include flex();
+
+	height: 50px;
+	color: gray;
+	font-weight: bold;
+	transition: color $menuHoverTransition;
+	&:hover {
+		color: #fff;
+	}
+}
+.authorization-button {
+	text-transform: uppercase;
+	transition: color $menuHoverTransition;
+	&:hover {
+		color: $menuHoverTextColor;
 	}
 }

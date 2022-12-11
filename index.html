@@ -12,64 +12,68 @@
 	<header class="header">
 		<div class="container">
 			<div class="header-content">
-				<a class="header-content__logo" href="#">
-					<img class="header-content__logo-img" src="img/main-logo.webp" alt="megogo">
+				<a class="logo" href="#">
+					<img class="logo__img" src="img/main-logo.webp" alt="megogo">
 				</a>
 				<ul class="menu">
 					<li class="menu__item">
-						<a class="menu__item-text" href="#">
-							Телеканали
-						</a>
+						<a class="menu__item-link" href="#">Телеканали</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__item-text" href="#">
-							Фільми
-						</a>
+						<a class="menu__item-link" href="#">Фільми</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__item-text" href="#">
-							Мультфільми
-						</a>
+						<a class="menu__item-link" href="#">Мультфільми</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__item-text" href="#">
-							Серіали
-						</a>
+						<a class="menu__item-link" href="#">Серіали</a>
 					</li>
 					<li class="menu__item">
-						<a class="menu__item-text" href="#">
-							Шоу
-						</a>
+						<a class="menu__item-link" href="#">Шоу</a>
 					</li>
-					<li class="menu__item menu__item_active">
-						<a class="menu__item-text" href="#">
-							Спорт
-						</a>
+					<li class="menu__dropdown">
+						<a class="menu__dropdown-item menu__dropdown-item_bg-white" href="#">Спорт</a>
+						<div class="menu__dropdown-list">
+							<a class="menu__dropdown-link" href="#">Футбол</a>
+							<a class="menu__dropdown-link" href="#">Єдиноборства</a>
+							<a class="menu__dropdown-link" href="#">Теніс</a>
+							<a class="menu__dropdown-link" href="#">Більше спорту</a>
+						</div>
 					</li>
 					<li class="menu__item">
-						<a class="menu__item-text" href="#">
-							Блогери
-						</a>
+						<a class="menu__item-link" href="#">Блогери</a>
 					</li>
-					<li class="menu__list">
-						<span class="menu__list-text">
-							...
-						</span>
+					<li class="menu__dropdown">
+						<span class="menu__dropdown-item menu__dropdown-item_gray">...</span>
+						<div class="menu__dropdown-list">
+							<a class="menu__dropdown-link" href="#">Школа онлайн</a>
+							<a class="menu__dropdown-link" href="#">Ввести промокод</a>
+							<a class="menu__dropdown-link" href="#">Аудіокниги та подкасти</a>
+							<a class="menu__dropdown-link" href="#">Прив'язати телевізов</a>
+							<a class="menu__dropdown-link" href="#">Усе про передплати</a>
+							<a class="menu__dropdown-link" href="#">Бонуси</a>
+							<a class="menu__dropdown-link" href="#">Кешбек</a>
+							<a class="menu__dropdown-link" href="#">Благодійність</a>
+							<a class="menu__dropdown-link" href="#">передплата для закладів</a>
+							<a class="menu__dropdown-link" href="#">Приставка MEGOGO</a>
+							<a class="menu__dropdown-link" href="#">MEGOGO на пристроях</a>
+							<a class="menu__dropdown-link" href="#">Кіно за передплатою</a>
+							<a class="menu__dropdown-link" href="#">Трейлери</a>
+							<a class="menu__dropdown-link" href="#">Discovery+</a>
+							<a class="menu__dropdown-link" href="#">Дивись як чутно</a>
+							<a class="menu__dropdown-link" href="#">Добірки</a>
+							<a class="menu__dropdown-link" href="#">POKER MEGOGO</a>
+							<a class="menu__dropdown-link" href="#">НВО</a>
+						</div>
 					</li>
 				</ul>
-				<div class="add-menu">
-					<a class="add-menu__item add-menu__item_tariffs" href="#">
-						Тарифи
-					</a>
-					<span class="add-menu__item add-menu__item_search">
-						<img class="add-menu__search-img" src="img/search-icon.png">
+				<div class="additional-menu">
+					<a class="tariffs-button additional-menu__button" href="#">Тарифи</a>
+					<span class="search-button additional-menu__button">
+						<img class="search-button__img" src="img/search-icon.png">
 					</span>
-					<span class="add-menu__item add-menu__item_language">
-						UA
-					</span>
-					<span class="add-menu__item add-menu__item_authorization">
-						Увійти
-					</span>
+					<span class="language-button additional-menu__button">UA</span>
+					<span class="authorization-button additional-menu__button">Увійти</span>
 				</div>
 			</div>
 		</div>
@@ -77,7 +81,7 @@
 	<main class="main">
 		<section class="film-view">
 			<div class="container">
-				<div class="film-content">
+				<div class="film-view__content">
 					<span class="film-content__sound-control">
 						<img class="film-content__sound-icon" src="img/sound-icon.png">
 					</span>
@@ -87,41 +91,25 @@
 						</span>
 						<div class="film-info__about-film">
 							<div class="film-info__additional-info">
-								<span class="film-info__additional-item">
-									Акція
-								</span>
-								<span class="film-info__additional-item">
-									Максимальна
-								</span>
-								<span class="film-info__additional-item">
-									Sniper. The White Raven
-								</span>
-								<span class="film-info__additional-item">
-									IMDB 6.2, MGG 5.1
-								</span>
-								<span class="film-info__additional-item">
-									16+
-								</span>
+								<span class="film-info__additional-item">Акція</span>
+								<span class="film-info__additional-item">Максимальна</span>
+								<span class="film-info__additional-item">Sniper. The White Raven</span>
+								<span class="film-info__additional-item">IMDB 6.2, MGG 5.1</span>
+								<span class="film-info__additional-item">16+</span>
 							</div>
 							<span class="film-info__name-film">
 								Снайпер. Білий Ворон (Розширена версія)
 							</span>
 							<div class="interaction-panel">
 								<div class="interaction-panel__item">
-									<span class="interaction-panel__revision-button">
-										Дивитися
-									</span>
-									<span class="interaction-panel__text">
-										Спробувати за 29 грн
-									</span>
+									<span class="interaction-panel__revision-button">Дивитися</span>
+									<span class="interaction-panel__text">Спробувати за 29 грн</span>
 								</div>
 								<div class="interaction-panel__item">
 									<span class="interaction-panel__elect-panel">
 										<img class="interaction-panel__elect-img" src="img/list-icon.png">
 									</span>
-									<span class="interaction-panel__text">
-										До обраного
-									</span>
+									<span class="interaction-panel__text">До обраного</span>
 								</div>
 								<div class="interaction-panel__preferences-panel">
 									<div class="interaction-panel__preferences-item">
