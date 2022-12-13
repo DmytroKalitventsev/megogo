@@ -1,18 +1,18 @@
 @import "./var";
-@import "./mixins";
+@import "./mixin";
 @import "./common";
 @import "./fonts";
 
 body {
 	font-family: "TT Norms Pro", sans-serif;
 	font-weight: 500;
-	font-style: normal;
 	font-size: 14px;
+	color: #fff;
 	background-color: #f2f2f2;
 }
 
 .container {
-	width: 1140px;
+	max-width: 1140px;
 	margin: 0 auto;
 }
 

@@ -2,7 +2,7 @@
 	@include flex(space-between, center);
 
 	background-color: #1F1F1F;
-	padding: 0 20px;
+	padding: 0 10px;
 }
 .logo {
 	@include flex();
@@ -19,7 +19,6 @@
 		&-link {
 			padding: 18px 7px;
 			letter-spacing: .8px;
-			color: $menuTextColor;
 			text-transform: uppercase;
 			line-height: 14px;
 			transition: color $menuHoverTransition;
@@ -27,63 +26,68 @@
 				color: $menuHoverTextColor;
 			}
 		}
+		&:first-child {
+			margin-left: 30px;
+		}
 		&:nth-child(7) {
 			margin-right: 5px;
 		}
 	}
-	&__dropdown {
-		position: relative;
-		transition: color $menuHoverTransition;
-		&:hover &-item {
+}
+.dropdown-menu {
+	position: relative;
+	transition: color $menuHoverTransition;
+	&:hover &__button {
+		background-color: $menuHoverBgColor;
+		color: $menuHoverTextColor;
+	}
+	&:hover &__list {
+		display: block;
+	}
+	&__button {
+		transition: color $menuHoverTransition,
+			background-color $menuHoverTransition;;
+		&:hover {
 			background-color: $menuHoverBgColor;
 			color: $menuHoverTextColor;
 		}
-		&:hover &-list {
-			display: block;
-		}
-		&-item {
-			transition: color $menuHoverTransition;
-			transition: background-color $menuHoverTransition;
+		&_bg-white {
+			padding: 18px 7px;
+			letter-spacing: .8px;
+			text-transform: uppercase;
+			line-height: 14px;
+			transition: color $menuHoverTransition,
+				background-color $menuHoverTransition;;
 			&:hover {
 				background-color: $menuHoverBgColor;
 				color: $menuHoverTextColor;
 			}
-			&_bg-white {
-				padding: 18px 7px;
-				letter-spacing: .8px;
-				color: $menuTextColor;
-				text-transform: uppercase;
-				line-height: 14px;
-				transition: color $menuHoverTransition;
-				transition: background-color $menuHoverTransition;
-				&:hover {
-					background-color: $menuHoverBgColor;
-					color: $menuHoverTextColor;
-				}
-			}
-			&_gray {
-				padding: 4px 17px 17px 17px;
-				font-weight: bold;
-				color: gray;
-				font-size: 24px;
-				letter-spacing: 2px;
-				line-height: 29px;
-				cursor: pointer;
-			}
 		}
-		&-list {
-			position: absolute;
-			top: 50px;
-			left: 0;
-			background-color: $menuHoverBgColor;
-			padding: 12px 19px;
-			font-size: 14px;
-			width: 240px;
-			box-shadow: 10px 10px 10px -10px rgb(0 0 0 / 15%);
-			display: none;
+		&_gray {
+			padding: 4px 17px 17px 17px;
+			font-weight: bold;
+			color: gray;
+			font-size: 24px;
+			letter-spacing: 2px;
+			line-height: 29px;
+			cursor: pointer;
 		}
+	}
+	&__list {
+		position: absolute;
+		top: 50px;
+		left: 0;
+		background-color: $menuHoverBgColor;
+		padding: 12px 19px;
+		width: 240px;
+		box-shadow: 10px 10px 10px -10px rgb(0 0 0 / 15%);
+		display: none;
+		z-index: 10;
+	}
+	&__item {
+		padding: 10px 0;
 		&-link {
-			padding: 7px 20px;
+			padding: 0 20px;
 			color: #333;
 			transition: color $menuHoverTransition;
 			&:hover {
@@ -96,9 +100,11 @@
 	@include flex();
 
 	&__button {
-		color: $menuTextColor;
 		margin-left: 20px;
 		cursor: pointer;
+		&:first-child {
+			margin-left: 5px;
+		}
 	}
 }
 .tariffs-button {
@@ -108,6 +114,7 @@
 	height: 30px;
 	border: 1px solid white;
 	border-radius: 3px;
+	letter-spacing: .5px;
 	transition: color $menuHoverTransition;
 	&:hover {
 		border-color: $menuHoverTextColor;

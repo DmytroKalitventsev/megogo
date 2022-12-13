@@ -1,4 +1,6 @@
 .film-content {
+	@include flex(flex-start, flex-end);
+
 	height: 577px;
 	background-image: 
 		linear-gradient(90deg, 
@@ -6,11 +8,10 @@
 			rgba(0,0,0,0.4) 100%),
 		url(../img/main-bg.webp);
 	background-size: cover;
-	display: flex;
-	align-items: flex-end;
 	position: relative;
-
 	&__sound-control {
+		@include flex();
+
 		width: 50px;
 		height: 50px;
 		border: 1px solid gainsboro;
@@ -19,9 +20,6 @@
 			linear-gradient(90deg, 
 				rgba(22,24,27,0.3) 0%, 
 				rgba(22,24,27,0.3) 100%);
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		position: absolute;
 		top: 30px;
 		right: 30px;
@@ -32,121 +30,142 @@
 	}
 }
 .film-info {
-	display: flex;
-	align-items: flex-end;
-
-	&__cover-photo{
-		margin: 35px 25px 35px 35px;
-	}
-	&__cover-img {
+	@include flex(flex-start, flex-end);
+}
+.cover-photo{
+	padding: 35px 15px 35px 35px;
+	&__img {
 		width: 140px;
 		height: 205px;
 	}
-	&__about-film {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start
-	}
+}
+.about-film {
+	@include flex(flex-start, flex-start, column);
+	
+	padding: 15px;
 	&__additional-info {
+		@include flex();
+
 		font-weight: bold;
-		color: white;
-		display: flex;
-		align-items: center;
 		text-transform: uppercase;
+		font-size: 13px;
 	}
 	&__additional-item {
 		margin-right: 20px;
-		font-size: 13px;
-
-		&:first-child {
-			background-color: #FC363B;
-			width: 47px;
-			height: 17px;
-			border-radius: 3px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin-right: 8px;
-			font-size: 11px;
-		}
-		&:nth-child(2) {
-			color: #f67422;
-		}
 	}
 	&__name-film {
-		color: white;
 		padding: 20px 0;
 		font-size: 24px;
 		width: 450px;
 		line-height: 40px
 	}
-.interaction-panel {
-	display: flex;
-		&__item {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin-right: 20px;
-			cursor: pointer;
-		}
-		&__revision-button {
-			width: 160px;
-			height: 45px;
-			background-color: #f60;
-			border-radius: 3px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: white;
-			font-size: 16px;
+}
+.action-info {
+	@include flex();
 
-			&::before {
-				content: "";
-				width: 0;
-				height: 0;
-				border-top: 7px solid transparent;
-				border-left: 13px solid white;
-				border-bottom: 7px solid transparent;
-				padding-right: 10px;
-			}
+	&__discount {
+		@include flex();
+		
+		background-color: #FC363B;
+		width: 47px;
+		height: 17px;
+		border-radius: 3px;
+		margin-right: 8px;
+		font-size: 11px;
+	}
+	&__about {
+		color: #f67422;
+		margin-right: 20px;
+	}
+}
+.interaction-panel {
+	@include flex();
+
+	&__item {
+		@include flex(center, center, column);
+
+		&:first-child {
+			margin-right: 20px;
 		}
-		&__text {
-			color: #b5b5b5;
-			margin-top: 7px;
-			font-size: 12px;
-			&:nth-child(-n + 2) {
-				font-size: 11px;
-			}
+		&:nth-child(2) {
+			margin-right: 30px;
 		}
-		&__elect-panel {
-			width: 85px;
-			height: 45px;
-			border: 2px solid darkGray;
-			border-radius: 3px;
-			background-image: 
-				linear-gradient(90deg, 
-					rgba(0,0,0,0) 0%, 
-					rgba(0,0,0,0) 100%);
-			display: flex;
-			justify-content: center;
-			align-items: center;
+	}
+}
+.watch-button {
+	&__item {
+		@include flex();
+
+		width: 160px;
+		height: 45px;
+		background-color: #f60;
+		border-radius: 3px;
+		font-size: 16px;
+		transition: $mainHoverTransition;
+		cursor: pointer;
+		&:hover {
+			background-color: #f30;
 		}
-		&__elect-img {
-			width: 25px;
+		&::before {
+			content: "";
+			width: 0;
+			height: 0;
+			border-top: 7px solid transparent;
+			border-left: 13px solid white;
+			border-bottom: 7px solid transparent;
+			padding-right: 10px;
 		}
-		&__preferences-panel {
-			display: flex;
-			align-items: center;
+	}
+	&__about {
+		color: #b5b5b5;
+		margin-top: 7px;
+		font-size: 13px;
+	}
+}
+.save-button {
+	&__item {
+		@include flex();
+
+		width: 85px;
+		height: 45px;
+		border: 2px solid darkGray;
+		border-radius: 3px;
+		cursor: pointer;
+		background-image: 
+			linear-gradient(90deg, 
+				rgba(0,0,0,0) 0%, 
+				rgba(0,0,0,0) 100%);
+	}
+	&__img {
+		width: 25px;
+	}
+	&__about {
+		color: #b5b5b5;
+		margin-top: 7px;
+		font-size: 13px;
+		line-height: 14px;
+	}
+}
+.preferences-button {
+	@include flex(center, flex-end);
+
+	height: 66px;
+	&__like {
+		@include flex(center, center, column);
+
+		cursor: pointer;
+		&:last-child {
+			margin-left: 30px;
 		}
-		&__like-film {
-			padding-right: 25px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-		&__like-icon {
+	}
+	&__item {
+		&-img {
 			width: 30px;
 		}
+	}
+	&__about {
+		color: #b5b5b5;
+		font-size: 12px;
+		margin-top: 18px;
 	}
 }

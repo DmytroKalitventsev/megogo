@@ -31,49 +31,93 @@
 					<li class="menu__item">
 						<a class="menu__item-link" href="#">Шоу</a>
 					</li>
-					<li class="menu__dropdown">
-						<a class="menu__dropdown-item menu__dropdown-item_bg-white" href="#">Спорт</a>
-						<div class="menu__dropdown-list">
-							<a class="menu__dropdown-link" href="#">Футбол</a>
-							<a class="menu__dropdown-link" href="#">Єдиноборства</a>
-							<a class="menu__dropdown-link" href="#">Теніс</a>
-							<a class="menu__dropdown-link" href="#">Більше спорту</a>
-						</div>
+					<li class="dropdown-menu">
+						<a class="dropdown-menu__button dropdown-menu__button_bg-white" href="#">Спорт</a>
+						<ul class="dropdown-menu__list">
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Футбол</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Єдиноборства</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Теніс</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Більше спорту</a>
+							</li>
+						</ul>
 					</li>
 					<li class="menu__item">
 						<a class="menu__item-link" href="#">Блогери</a>
 					</li>
-					<li class="menu__dropdown">
-						<span class="menu__dropdown-item menu__dropdown-item_gray">...</span>
-						<div class="menu__dropdown-list">
-							<a class="menu__dropdown-link" href="#">Школа онлайн</a>
-							<a class="menu__dropdown-link" href="#">Ввести промокод</a>
-							<a class="menu__dropdown-link" href="#">Аудіокниги та подкасти</a>
-							<a class="menu__dropdown-link" href="#">Прив'язати телевізов</a>
-							<a class="menu__dropdown-link" href="#">Усе про передплати</a>
-							<a class="menu__dropdown-link" href="#">Бонуси</a>
-							<a class="menu__dropdown-link" href="#">Кешбек</a>
-							<a class="menu__dropdown-link" href="#">Благодійність</a>
-							<a class="menu__dropdown-link" href="#">передплата для закладів</a>
-							<a class="menu__dropdown-link" href="#">Приставка MEGOGO</a>
-							<a class="menu__dropdown-link" href="#">MEGOGO на пристроях</a>
-							<a class="menu__dropdown-link" href="#">Кіно за передплатою</a>
-							<a class="menu__dropdown-link" href="#">Трейлери</a>
-							<a class="menu__dropdown-link" href="#">Discovery+</a>
-							<a class="menu__dropdown-link" href="#">Дивись як чутно</a>
-							<a class="menu__dropdown-link" href="#">Добірки</a>
-							<a class="menu__dropdown-link" href="#">POKER MEGOGO</a>
-							<a class="menu__dropdown-link" href="#">НВО</a>
-						</div>
+					<li class="dropdown-menu">
+						<span class="dropdown-menu__button dropdown-menu__button_gray">...</span>
+						<ul class="dropdown-menu__list">
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Школа онлайн</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Ввести промокод</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Аудіокниги та подкасти</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Прив'язати телевізов</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Усе про передплати</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Бонуси</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Кешбек</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Благодійність</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">передплата для закладів</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Приставка MEGOGO</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">MEGOGO на пристроях</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Кіно за передплатою</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Трейлери</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Discovery+</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Дивись як чутно</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">Добірки</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">POKER MEGOGO</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a class="dropdown-menu__item-link" href="#">НВО</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 				<div class="additional-menu">
 					<a class="tariffs-button additional-menu__button" href="#">Тарифи</a>
-					<span class="search-button additional-menu__button">
+					<button class="search-button additional-menu__button" type="button">
 						<img class="search-button__img" src="img/search-icon.png">
-					</span>
-					<span class="language-button additional-menu__button">UA</span>
-					<span class="authorization-button additional-menu__button">Увійти</span>
+					</button>
+					<button class="language-button additional-menu__button" type="button">UA</button>
+					<button class="authorization-button additional-menu__button" type="button">Увійти</button>
 				</div>
 			</div>
 		</div>
@@ -81,48 +125,50 @@
 	<main class="main">
 		<section class="film-view">
 			<div class="container">
-				<div class="film-view__content">
+				<div class="film-content">
 					<span class="film-content__sound-control">
 						<img class="film-content__sound-icon" src="img/sound-icon.png">
 					</span>
 					<div class="film-info">
-						<span class="film-info__cover-photo">
-							<img class="film-info__cover-img" src="img/cover-photo.webp" alt="Обкладинка фільму">
+						<span class="cover-photo">
+							<img class="cover-photo__img" src="img/cover-photo.webp" alt="Обкладинка фільму">
 						</span>
-						<div class="film-info__about-film">
-							<div class="film-info__additional-info">
-								<span class="film-info__additional-item">Акція</span>
-								<span class="film-info__additional-item">Максимальна</span>
-								<span class="film-info__additional-item">Sniper. The White Raven</span>
-								<span class="film-info__additional-item">IMDB 6.2, MGG 5.1</span>
-								<span class="film-info__additional-item">16+</span>
+						<div class="about-film">
+							<div class="about-film__additional-info">
+								<div class="action-info">
+									<span class="action-info__discount">Акція</span>
+									<span class="action-info__about">Максимальна</span>
+								</div>
+								<span class="about-film__additional-item">Sniper. The White Raven</span>
+								<span class="about-film__additional-item">IMDB 6.2, MGG 5.1</span>
+								<span class="about-film__additional-item">16+</span>
 							</div>
-							<span class="film-info__name-film">
+							<span class="about-film__name-film">
 								Снайпер. Білий Ворон (Розширена версія)
 							</span>
 							<div class="interaction-panel">
-								<div class="interaction-panel__item">
-									<span class="interaction-panel__revision-button">Дивитися</span>
-									<span class="interaction-panel__text">Спробувати за 29 грн</span>
+								<div class="watch-button interaction-panel__item">
+									<button class="watch-button__item" type="button">Дивитися</button>
+									<span class="watch-button__about">Спробувати за 29 грн</span>
 								</div>
-								<div class="interaction-panel__item">
-									<span class="interaction-panel__elect-panel">
-										<img class="interaction-panel__elect-img" src="img/list-icon.png">
+								<div class="save-button interaction-panel__item">
+									<span class="save-button__item">
+										<img class="save-button__img" src="img/list-icon.png">
 									</span>
-									<span class="interaction-panel__text">До обраного</span>
+									<span class="save-button__about">До обраного</span>
 								</div>
-								<div class="interaction-panel__preferences-panel">
-									<div class="interaction-panel__preferences-item">
-										<div class="interaction-panel__like-film">
-											<img class="interaction-panel__like-icon" src="img/like-icon.png">
-											<span class="interaction-panel__text">16тис.</span>
-										</div>
+								<div class="preferences-button interaction-panel__item">
+									<div class="preferences-button__like">
+										<span class="preferences-button__item">
+											<img class="preferences-button__item-img" src="img/like-icon.png">
+										</span>
+										<span class="preferences-button__about">16тис.</span>
 									</div>
-									<div class="interaction-panel__preferences-item">
-										<div class="interaction-panel__like-film">
-											<img class="interaction-panel__like-icon" src="img/dislike-icon.png">
-											<span class="interaction-panel__text">484</span>
-										</div>
+									<div class="preferences-button__like">
+										<span class="preferences-button__item">
+											<img class="preferences-button__item-img" src="img/dislike-icon.png">
+										</span>
+										<span class="preferences-button__about">484</span>
 									</div>
 								</div>
 							</div>
