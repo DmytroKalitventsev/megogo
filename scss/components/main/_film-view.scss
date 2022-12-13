@@ -50,8 +50,13 @@
 		text-transform: uppercase;
 		font-size: 13px;
 	}
+	&__additional-text {
+		@include flex();
+
+	}
 	&__additional-item {
 		margin-right: 20px;
+		white-space: nowrap;
 	}
 	&__name-film {
 		padding: 20px 0;
@@ -167,5 +172,26 @@
 		color: #b5b5b5;
 		font-size: 12px;
 		margin-top: 18px;
+	}
+}
+@media (max-width: 780px) {
+	.about-film__additional-info {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		line-height: 20px;
+	}
+	.about-film__name-film {
+		width: initial;
+		line-height: 30px;
+	}
+}
+@media (max-width: 610px) {
+	.film-info {
+		display: flex;
+		flex-direction: column
+	}
+	.cover-photo {
+		display: none;
 	}
 }
